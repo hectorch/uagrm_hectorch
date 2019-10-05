@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-md-12">
+        <a href="#" class="btn btn-primary btn-flat"><span class="fa fa-plus"></span> Asignar equipo</a>
+    </div>
+</div>
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Dirección</th>
+            <th scope="col">Telefóno</th>
+            <th scope="col">GPS</th>
+            <th scope="col">Padre Espiritual</th>
+            <th scope="col">Sexo</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let simpatizante of simpatizantes">
+            <td> {{simpatizante.codsimpatizante }} </td>
+            <td> {{simpatizante.nombre }} </td>
+            <td> {{simpatizante.apellido }} </td>
+            <td> {{simpatizante.direccion }} </td>
+            <td> {{simpatizante.telefono }} </td>
+            <td> {{simpatizante.gps }} </td>
+            <td> {{simpatizante.padre_espiritual }} </td>
+            <td> {{simpatizante.codsexo }} </td>
+            <td> <button (click)="bajasimpatizante(simpatizante.codsimpatizante)" class="btn btn-danger btn-xs"><span class="fa fa-trash"></span> Eliminar </button> </td>
+            <td> <button (click)="seleccionarsimpatizante(simpatizante.codsimpatizante)" class="btn btn-success btn-info"><span class="fa fa-pencil-square-o"></span> Editar </button> </td>
+    </tbody>
+</table>

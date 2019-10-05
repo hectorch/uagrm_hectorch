@@ -1,0 +1,36 @@
+<div class="container body">
+    <div class="main_container">
+        <div class="col-md-3 left_col">
+            <div class="left_col scroll-view">
+                <div class="navbar nav_title" style="border: 0;">
+                    <a [routerLink]="['/home']" routerLinkActive="router-link-active" class="site_title"> <span>NAZARENO TN</span></a>
+                </div>
+                <app-sidebar></app-sidebar>
+
+            </div>
+        </div>
+        <app-header></app-header>
+
+        <div class="right_col" role="main">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="x_panel tile fixed_height_320">
+                        <h2>
+                            <app-breadcrumbs></app-breadcrumbs>
+                        </h2>
+                        <div class="x_title"></div>
+                        <router-outlet></router-outlet>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <footer>
+            <div class="pull-right">
+                Iglesia del Nazareno <a href="#">Tierras Nuevas</a>
+            </div>
+            <div class="clearfix"></div>
+        </footer>
+    </div>
+
+</div>
