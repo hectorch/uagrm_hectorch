@@ -5,6 +5,7 @@ import cors from 'cors';
 import indexRoutes from './routes/indexRoutes';
 import simpatizanteRoutes from './routes/simpatizanteRoutes';
 import eventoRoutes from './routes/eventoRoutes';
+import tipocampRoutes from './routes/tipocampRoutes';
 
 class Server {
 
@@ -29,6 +30,7 @@ class Server {
         this.app.use('/', indexRoutes);
         this.app.use('/api/simpatizantes', simpatizanteRoutes);
         this.app.use('/api/evento', eventoRoutes);
+        this.app.use('/api/tipocamp', tipocampRoutes);
     }
 
     start() {
