@@ -7,7 +7,9 @@ import {
     SidebarService,
     SharedService,
     GuardsGuard,
-    AuthService
+    AuthService,
+    EventoService,
+    TipocampService
  } from './service.index';
 
 
@@ -21,7 +23,9 @@ import {
     SidebarService,
     SharedService,
     GuardsGuard,
-    AuthService
+    AuthService,
+    EventoService,
+    TipocampService
   ],
   declarations: []
 })

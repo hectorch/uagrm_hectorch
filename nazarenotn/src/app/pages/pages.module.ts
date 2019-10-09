@@ -50,6 +50,8 @@ import { AddEventoComponent } from './evento/add-evento.component';
         CargoComponent,
         UsuarioComponent,
         EventoComponent,
+        EditEventoComponent,
+        AddEventoComponent,
         OrganizacionComponent,
         DiscipuladoComponent,
         VisitaComponent,
