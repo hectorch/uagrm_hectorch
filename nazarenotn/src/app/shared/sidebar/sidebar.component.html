@@ -17,7 +17,7 @@
             <li *ngFor="let menu of sideBar.menu"><a><i [class]="menu.icono"></i>{{ menu.titulo }}<span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li *ngFor="let submenu of menu.submenu">
-                        <a routerLinkActive="active" [routerLink]="[ submenu.url ]"> {{ submenu.titulo }} </a>
+                        <a routerLinkActive="active" [routerLink]="[ submenu.url ]">{{ submenu.titulo }} </a>
                     </li>
                 </ul>
             </li>

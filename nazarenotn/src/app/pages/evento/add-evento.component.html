@@ -1,0 +1,126 @@
+<div class="row">
+    <div class="col-4">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Comprobante</label>
+            </div>
+            <select [(ngModel)]="compra.codcomprobante" class="custom-select" id="inputGroupSelect01">
+                <option *ngFor="let c of comprobantes" [value]="c.codcomprobante">{{c.nombre}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Factura/Recibo</span>
+            </div>
+            <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" [(ngModel)]="compra.nrofactura" placeholder="Nro Factura/Recibo">
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Fecha</span>
+            </div>
+            <input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" [(ngModel)]="compra.fecha">
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Total Bs:</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="{{ total }}" [value]="total" disabled>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Proveedor</label>
+            </div>
+            <select [(ngModel)]="compra.codpersonaprov" class="custom-select" id="inputGroupSelect01">
+                <option *ngFor="let pr of proveedores" [value]="pr.codpersona">{{pr.nombre}}</option>
+            </select>
+        </div>
+    </div>
+
+</div>
+<hr>
+<div class="row">
+    <div class="col-md-4">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Productos</label>
+            </div>
+            <select class="custom-select" id="inputGroupSelect01" [(ngModel)]="detallecompra.codproducto">
+                <option *ngFor="let p of product" [value]="p.codproducto">{{p.nombre+' '+p.descripcion}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Cantidad</span>
+            </div>
+            <input type="number" name="cantidad" id="cantidad" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" [(ngModel)]="detallecompra.cantidad" required>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Descripcion</span>
+            </div>
+            <input type="text" name="detalle" id="detalle" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" [(ngModel)]="detallecompra.descripcion" required>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Costo U</span>
+            </div>
+            <input type="number" name="costou" id="costou" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" [(ngModel)]="detallecompra.costou" required>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <button type="submit" class="btn btn-info form-control" (click)="pushProducto()">Agregar</button>
+    </div>
+</div>
+<!--TABLA-->
+<div class="row">
+    <div class="col">
+        <table class="table table-striped" id="carrito" [(ngModel)]="compra.detallecompra">
+            <tr>
+                <td>Codigo</td>
+                <td>Nombre</td>
+                <td>Cantidad</td>
+                <td>Descripcion</td>
+                <td>Precio U</td>
+                <td>Subtotal</td>
+                <td></td>
+            </tr>
+            <tr *ngFor="let p of detallecompras;let i=index">
+                <td>{{p.codproducto}}</td>
+                <td>{{p.nombre}}</td>
+                <td>{{p.cantidad}}</td>
+                <td>{{p.descripcion}}</td>
+                <td>{{p.costou}}</td>
+                <td>{{subtotal}}</td>
+                <td>
+                    <button type="button" class="btn btn-danger" (click)="deleteProducto(i)"><i class="fa fa-trash"
+                                aria-hidden="true"></i>Eliminar
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <button type="submit" class="btn btn-danger form-control">Cancelar</button>
+    </div>
+    <div class="col-md-4">
+        <button type="submit" class="btn btn-success form-control">Guardar</button>
+    </div>
+</div>

@@ -3,13 +3,15 @@ import morgan from 'morgan';
 import cors from 'cors';
 
 import indexRoutes from './routes/indexRoutes';
-import simpatizantesRoutes from './routes/simpatizanteRoutes';
+import simpatizanteRoutes from './routes/simpatizanteRoutes';
+import eventoRoutes from './routes/eventoRoutes';
 
-class Server{
+class Server {
+
     public app: Application;
-
-    constructor(){
-        this.app=express();
+    
+    constructor() {
+        this.app = express();
         this.config();
         this.routes();
     }
@@ -25,7 +27,8 @@ class Server{
 
     routes(): void {
         this.app.use('/', indexRoutes);
-        this.app.use('/api/simpatizante', simpatizantesRoutes);
+        this.app.use('/api/simpatizantes', simpatizanteRoutes);
+        this.app.use('/api/evento', eventoRoutes);
     }
 
     start() {
@@ -33,6 +36,7 @@ class Server{
             console.log('Server on port', this.app.get('port'));
         });
     }
+
 }
 
 const server = new Server();

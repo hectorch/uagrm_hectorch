@@ -1,1 +1,93 @@
-<p>evento works!</p>
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+        <div class="x_title">
+            <h2>Lista <small>Actividades</small></h2>
+            <ul class="nav navbar-right panel_toolbox">
+                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+            <div class="row">
+                <div class="col-md-12">
+                    <a href="#" class="btn btn-primary btn-flat"><span class="fa fa-plus"></span> Registrar nuevo</a>
+                </div>
+            </div>
+            <p class="text-muted font-13 m-b-30">
+                Estas actividades se los ponemos en las manos de Dios para que el nos guie
+            </p>
+            <table id="datatable" class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Lugar</th>
+                        <th>Fecha inicio</th>
+                        <th>Fecha fin</th>
+                        <th>Hora</th>
+                        <th>Encargado</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let simpatizante of simpatizantes ">
+                        <td> {{simpatizante.codsimpatizante }} </td>
+                        <td> {{simpatizante.nombre }} </td>
+                        <td> {{simpatizante.apellido }} </td>
+                        <td> {{simpatizante.direccion }} </td>
+                        <td> {{simpatizante.telefono }} </td>
+                        <td> {{simpatizante.gps }} </td>
+                        <td> {{simpatizante.padre_espiritual }} </td>
+                        <td> {{simpatizante.codsexo }} </td>
+                        <td> <button (click)="seleccionarsimpatizante(simpatizante.codsimpatizante) " class="btn btn-success btn-info "><span class="fa fa-pencil-square-o "></span> Editar </button> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+        <div class="x_title">
+            <h2>Actividades <small>Raalizados</small></h2>
+            <ul class="nav navbar-right panel_toolbox">
+                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+
+            <p class="text-muted font-13 m-b-30">
+                Estas actividades ya fueron realizados con la dirección de Dios y la colaboración de los miembros
+            </p>
+            <table id="datatable" class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Lugar</th>
+                        <th>Fecha fin</th>
+                        <th>Nro Simpatizantes</th>
+                        <th>Encargado</th>
+                        <th>Comentario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let simpatizante of simpatizantes ">
+                        <td> {{simpatizante.codsimpatizante }} </td>
+                        <td> {{simpatizante.nombre }} </td>
+                        <td> {{simpatizante.apellido }} </td>
+                        <td> {{simpatizante.direccion }} </td>
+                        <td> {{simpatizante.telefono }} </td>
+                        <td> {{simpatizante.gps }} </td>
+                        <td> {{simpatizante.padre_espiritual }} </td>
+                        <td> {{simpatizante.codsexo }} </td>
+                        <td> {{simpatizante.comentario }} </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -18,6 +18,10 @@ import { OrganizacionComponent } from './organizacion/organizacion.component';
 import { DiscipuladoComponent } from './discipulado/discipulado.component';
 import { VisitaComponent } from './visita/visita.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { AddSimpatizanteComponent } from './simpatizante/add-simpatizante.component';
+import { EditSimpatizanteComponent } from './simpatizante/edit-simpatizante.component';
+import { EditEventoComponent } from './evento/edit-evento.component';
+import { AddEventoComponent } from './evento/add-evento.component';
 
 
 @NgModule({
@@ -32,7 +36,11 @@ import { PerfilComponent } from './perfil/perfil.component';
         OrganizacionComponent,
         DiscipuladoComponent,
         VisitaComponent,
-        PerfilComponent
+        PerfilComponent,
+        AddSimpatizanteComponent,
+        EditSimpatizanteComponent,
+        EditEventoComponent,
+        AddEventoComponent
 
     ],
     exports: [

@@ -634,15 +634,15 @@ body {
 }
 
 .fixed_height_320 {
-    height: 100%;
+    height: 350px;
 }
 
 .fixed_height_390 {
-    height: 100%;
+    height: 380px;
 }
 
 .fixed_height_200 {
-    height: 100%;
+    height: 400px;
 }
 
 .overflow_hidden {

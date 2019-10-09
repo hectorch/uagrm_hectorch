@@ -2,7 +2,7 @@ import express, { Router } from 'express';
 
 import simpatizanteController from '../controllers/simpatizanteController';
 
-class SimpatizantesRoutes {
+class SimpatizanteRoutes {
 
     router: Router = Router();
 
@@ -20,4 +20,4 @@ class SimpatizantesRoutes {
 
 }
 
-export default new SimpatizantesRoutes().router;
+export default new SimpatizanteRoutes().router;

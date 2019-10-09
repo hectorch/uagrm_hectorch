@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const simpatizanteController_1 = __importDefault(require("../controllers/simpatizanteController"));
-class SimpatizantesRoutes {
+class SimpatizanteRoutes {
     constructor() {
         this.router = express_1.Router();
         this.config();
@@ -18,4 +18,4 @@ class SimpatizantesRoutes {
         this.router.delete('/:id', simpatizanteController_1.default.delete);
     }
 }
-exports.default = new SimpatizantesRoutes().router;
+exports.default = new SimpatizanteRoutes().router;

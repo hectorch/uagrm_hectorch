@@ -1,1 +1,160 @@
-<p>home works!</p>
+<div class="col-md-12 col-xs-12 widget widget_tally_box">
+    <div class="x_panel">
+        <div class="x_title">
+            <h2>Discipulado</h2>
+            <ul class="nav navbar-right panel_toolbox">
+                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+            <div style="text-align: center; margin-bottom: 17px">
+                <span class="chart" data-percent="70">
+                    <span class="percent"></span>
+                </span>
+            </div>
+
+            <div class="pie_bg" style="text-align: center; display: none; margin-bottom: 17px">
+                <canvas id="canvas_doughnut4" height="130"></canvas>
+            </div>
+
+            <div style="text-align: center;">
+                <div class="btn-group" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-default btn-sm">Enero</button>
+                    <button type="button" class="btn btn-default btn-sm">Febrero</button>
+                    <button type="button" class="btn btn-default btn-sm">Marzo</button>
+                    <button type="button" class="btn btn-default btn-sm">Abril</button>
+                    <button type="button" class="btn btn-default btn-sm">Mayo</button>
+                    <button type="button" class="btn btn-default btn-sm">Junio</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Porcentaje de visitas realizados -->
+<div class="col-md-12 col-xs-12 widget widget_tally_box">
+    <div class="x_panel">
+        <div class="x_title">
+            <h2>Visitas</h2>
+            <ul class="nav navbar-right panel_toolbox">
+                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+            <div style="text-align: center; margin-bottom: 17px">
+                <span class="chart" data-percent="80">
+                    <span class="percent"></span>
+                </span>
+            </div>
+
+            <div class="pie_bg" style="text-align: center; display: none; margin-bottom: 17px">
+                <canvas id="canvas_doughnut4" height="130"></canvas>
+            </div>
+
+            <div style="text-align: center;">
+                <div class="btn-group" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-default btn-sm">Enero</button>
+                    <button type="button" class="btn btn-default btn-sm">Febrero</button>
+                    <button type="button" class="btn btn-default btn-sm">Marzo</button>
+                    <button type="button" class="btn btn-default btn-sm">Abril</button>
+                    <button type="button" class="btn btn-default btn-sm">Mayo</button>
+                    <button type="button" class="btn btn-default btn-sm">Junio</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+        <div class="x_title">
+            <h2>Proximas <small>Actividades</small></h2>
+            <ul class="nav navbar-right panel_toolbox">
+                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+            <p class="text-muted font-13 m-b-30">
+
+            </p>
+            <table id="datatable" class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Fecha/Dia</th>
+                        <th>Hora</th>
+                        <th>Lugar</th>
+                        <th>Tema a tratar</th>
+                        <th>Tipo</th>
+                        <th>Lider engargado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let simpatizante of simpatizantes ">
+                        <td> {{simpatizante.codsimpatizante }} </td>
+                        <td> {{simpatizante.nombre }} </td>
+                        <td> {{simpatizante.apellido }} </td>
+                        <td> {{simpatizante.direccion }} </td>
+                        <td> {{simpatizante.telefono }} </td>
+                        <td> {{simpatizante.gps }} </td>
+                        <td> {{simpatizante.padre_espiritual }} </td>
+                        <td> {{simpatizante.codsexo }} </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+        <div class="x_title">
+            <h2>Actividades <small>Realizados</small></h2>
+            <ul class="nav navbar-right panel_toolbox">
+                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+            <p class="text-muted font-13 m-b-30">
+
+            </p>
+            <table id="datatable" class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Fecha/Dia</th>
+                        <th>Hora</th>
+                        <th>Lugar</th>
+                        <th>Tema a tratar</th>
+                        <th>Tipo</th>
+                        <th>Lider engargado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let simpatizante of simpatizantes ">
+                        <td> {{simpatizante.codsimpatizante }} </td>
+                        <td> {{simpatizante.nombre }} </td>
+                        <td> {{simpatizante.apellido }} </td>
+                        <td> {{simpatizante.direccion }} </td>
+                        <td> {{simpatizante.telefono }} </td>
+                        <td> {{simpatizante.gps }} </td>
+                        <td> {{simpatizante.padre_espiritual }} </td>
+                        <td> {{simpatizante.codsexo }} </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

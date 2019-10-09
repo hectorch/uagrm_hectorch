@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 declare function init_plugins();
+declare function init_plugins_charts()
+declare function init_plugins_charts2();
 
 @Component({
   selector: 'app-pages',
@@ -13,6 +15,8 @@ export class PagesComponent implements OnInit {
 
   ngOnInit() {
     init_plugins();
+    init_plugins_charts()
+    init_plugins_charts2();
   }
 
 }

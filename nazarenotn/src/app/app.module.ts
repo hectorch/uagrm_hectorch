@@ -13,6 +13,7 @@ import { AuthComponent } from "./auth/auth.component";
 import { ServiceModule } from './services/service.module';
 
 import { PagesModule } from './pages/pages.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PagesModule } from './pages/pages.module';
     PagesModule,
     ReactiveFormsModule,
     FormsModule,
-    ServiceModule
+    ServiceModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
