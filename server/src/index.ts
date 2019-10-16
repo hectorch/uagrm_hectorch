@@ -6,6 +6,7 @@ import indexRoutes from './routes/indexRoutes';
 import simpatizanteRoutes from './routes/simpatizanteRoutes';
 import eventoRoutes from './routes/eventoRoutes';
 import tipocampRoutes from './routes/tipocampRoutes';
+import miembroRoutes from './routes/miembroRoutes';
 
 class Server {
 
@@ -28,9 +29,10 @@ class Server {
 
     routes(): void {
         this.app.use('/', indexRoutes);
-        this.app.use('/api/simpatizantes', simpatizanteRoutes);
+        this.app.use('/api/simpatizante', simpatizanteRoutes);
         this.app.use('/api/evento', eventoRoutes);
         this.app.use('/api/tipocamp', tipocampRoutes);
+        this.app.use('/api/miembro', miembroRoutes);
     }
 
     start() {

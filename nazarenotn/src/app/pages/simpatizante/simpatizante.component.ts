@@ -11,9 +11,12 @@ export class SimpatizanteComponent implements OnInit {
   constructor(private simpatizanteService: SimpatizantesService) { }
 
   ngOnInit() {
+    this.getSimpatizantes();
+  }
+  
+  getSimpatizantes(){
     this.simpatizanteService.getSimpatizantes().subscribe(
-      res=>{ this.simpatizantes=res},
-      err=>console.error(err)
+      result=>this.simpatizantes=result
     );
   }
 

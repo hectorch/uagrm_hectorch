@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PagesRoutes } from './pages.routes';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { SharedModule } from '../shared/shared.module';
 
@@ -8,6 +9,10 @@ import { FormsModule } from '@angular/forms';
 
 import { PagesComponent } from './pages.component';
 
+// servicios
+import { EventoService } from "../services/service.index";
+
+//Componentes
 import { HomeComponent } from "./home/home.component";
 import { MiembroComponent } from './miembro/miembro.component';
 import { SimpatizanteComponent } from "./simpatizante/simpatizante.component";
@@ -22,7 +27,9 @@ import { AddSimpatizanteComponent } from './simpatizante/add-simpatizante.compon
 import { EditSimpatizanteComponent } from './simpatizante/edit-simpatizante.component';
 import { EditEventoComponent } from './evento/edit-evento.component';
 import { AddEventoComponent } from './evento/add-evento.component';
-
+import { AppComponent } from '../app.component';
+import { AddMiembroComponent } from "./miembro/add-miembro.component";
+import { EditMiembroComponent } from './miembro/edit-miembro.component';
 
 @NgModule({
     declarations: [
@@ -40,7 +47,9 @@ import { AddEventoComponent } from './evento/add-evento.component';
         AddSimpatizanteComponent,
         EditSimpatizanteComponent,
         EditEventoComponent,
-        AddEventoComponent
+        AddEventoComponent,
+        AddMiembroComponent,
+        EditMiembroComponent
 
     ],
     exports: [
@@ -61,7 +70,12 @@ import { AddEventoComponent } from './evento/add-evento.component';
         SharedModule,
         PagesRoutes,
         FormsModule,
+        HttpClientModule,
         BrowserModule
-    ]
+    ],
+    providers:[
+        EventoService
+    ],
+    bootstrap:[AppComponent]
 })
 export class PagesModule { }

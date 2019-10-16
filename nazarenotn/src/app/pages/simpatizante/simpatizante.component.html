@@ -25,6 +25,7 @@
                             <th>GPS</th>
                             <th>Padre Espiritual</th>
                             <th>Sexo</th>
+                            <th>Estado civil</th>
                             <th></th>
                             <th></th>
                         </tr>
@@ -38,9 +39,12 @@
                             <td> {{simpatizante.telefono }} </td>
                             <td> {{simpatizante.gps }} </td>
                             <td> {{simpatizante.padre_espiritual }} </td>
-                            <td> {{simpatizante.codsexo }} </td>
+                            <td> {{simpatizante.sexo }} </td>
+                            <td> {{simpatizante.estado_civil }} </td>
                             <td> <button (click)="bajasimpatizante(simpatizante.codsimpatizante) " class="btn btn-danger btn-xs "><span class="fa fa-trash "></span> Eliminar </button> </td>
-                            <td> <button (click)="seleccionarsimpatizante(simpatizante.codsimpatizante) " class="btn btn-success btn-info "><span class="fa fa-pencil-square-o "></span> Editar </button> </td>
+                            <td> <button (click)="seleccionarsimpatizante(simpatizante.codsimpatizante) " class="btn btn-success btn-info "><span class="fa fa-pencil-square-o "></span> Editar </button>
+                                <button (click)="seleccionarsimpatizante(simpatizante.codsimpatizante) " class="btn btn-success btn-info "><span class="fa fa-pencil-square-o "></span> Consolidar </button>
+                            </td>
                     </tbody>
                 </table>
             </div>

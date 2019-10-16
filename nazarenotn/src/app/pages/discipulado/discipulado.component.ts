@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SimpatizantesService } from "../../services/datos/simpatizantes.service";
+
 
 @Component({
   selector: 'app-discipulado',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./discipulado.component.css']
 })
 export class DiscipuladoComponent implements OnInit {
-
-  constructor() { }
+  simpatizantes: any=[];
+  constructor(private simpatizanteService: SimpatizantesService) { }
 
   ngOnInit() {
+    this.getSimpatizantes();
+  }
+
+  getSimpatizantes(){
+    this.simpatizanteService.getSimpatizantes().subscribe(
+      result=>this.simpatizantes=result
+    );
   }
 
 }

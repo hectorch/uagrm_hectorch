@@ -7,12 +7,12 @@ import { Simpatizante } from "../../models/Simpatizante";
   providedIn: 'root'
 })
 export class SimpatizantesService {
-  API_URI='http://localhost:3000/api';
+  API_URI='http://localhost/api/simpatizante';
 
   constructor(private http: HttpClient) { }
 
   getSimpatizantes(){
-    return this.http.get(`${this.API_URI}/simpatizante`);
+    return this.http.get(`${this.API_URI}/getSimpatizante.php`);
   }
 
   getSimpatizante(codsimpatizante: string){

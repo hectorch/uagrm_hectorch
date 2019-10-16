@@ -9,3 +9,6 @@ export { SidebarService } from './shared/sidebar.service';
 // servicios datos
 export { TipocampService } from "./datos/tipocamp.service";
 export { EventoService } from "./datos/evento.service";
+export { MiembroService } from './datos/miembro.service';
+export { SexoService } from './datos/sexo.service';
+export { EstadocivilService } from './datos/estadocivil.service';

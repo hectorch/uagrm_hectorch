@@ -1,1 +1,51 @@
-<p>usuario works!</p>
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Lista <small>Usuarios</small></h2>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="#" class="btn btn-primary btn-flat"><span class="fa fa-plus"></span> Registrar nuevo</a>
+                    </div>
+                </div>
+                <p class="text-muted font-13 m-b-30">
+                    esto es titulo
+                </p>
+                <table id="datatable" class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Nick</th>
+                            <th>pass</th>
+                            <th>Rol</th>
+                            <th>Descripcion</th>
+                            <th>Estado</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let usuario of usuarios ">
+                            <td> {{usuario.codusuario }} </td>
+                            <td> {{usuario.nombre }} </td>
+                            <td> {{usuario.apellido }} </td>
+                            <td> {{usuario.nick }} </td>
+                            <td> {{usuario.pass }} </td>
+                            <td> {{usuario.rol }} </td>
+                            <td> {{usuario.descripcion }} </td>
+                            <td> {{usuario.estado }} </td>
+                            <td> <button (click)="bajausuario(usuario.codusuario) " class="btn btn-danger btn-xs "><span class="fa fa-trash "></span> Eliminar </button> </td>
+                            <td> <button (click)="seleccionarusuario(usuario.codusuario) " class="btn btn-success btn-info "><span class="fa fa-pencil-square-o "></span> Editar </button>
+                                <button (click)="seleccionarusuario(usuario.codusuario) " class="btn btn-success btn-info "><span class="fa fa-pencil-square-o "></span> Cambiar contraseña </button>
+                            </td>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
